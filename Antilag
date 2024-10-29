@@ -1,0 +1,26 @@
+-- Script para otimizar o desempenho do jogo
+
+-- Função para diminuir o brilho
+function setBrightness(value)
+    game.Lighting.Brightness = value
+end
+
+-- Função para diminuir a qualidade gráfica
+function setGraphicsQuality(level)
+    if level >= 0 and level <= 10 then
+        settings().Rendering.QualityLevel = level
+    else
+        print("Nível de qualidade inválido. Deve estar entre 0 e 10.")
+    end
+end
+
+-- Função para otimizar configurações para FPS
+function optimizeSettings()
+    setBrightness(0.5) -- Diminui o brilho
+    setGraphicsQuality(3) -- Define a qualidade gráfica para um nível mais baixo
+    -- Adicione outras configurações que você deseja otimizar
+end
+
+-- Executa a otimização
+optimizeSettings()
+print("Configurações otimizadas para melhor desempenho!")
